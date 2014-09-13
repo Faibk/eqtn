@@ -1,6 +1,8 @@
-var eqtStore = function(successCallback) {
+var EqtStore = function () {
 
-	this.getEQT = function() {
+	this.getEQT = function () {
 		return "xmleqt";
 	};
-}
+    
+    console.log("eqtStore intialized");
+};

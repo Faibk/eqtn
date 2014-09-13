@@ -1,3 +1,0 @@
-var IngameView = function () {
-
-};

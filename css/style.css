@@ -12,11 +12,17 @@ html, body {
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 100px;
 	color: #234;
+    text-align: center;
 }
 
 header {
 	width: 800px;
 	margin: auto;
+}
+
+sup {
+    vertical-align:top; 
+    font-size:40px;
 }
