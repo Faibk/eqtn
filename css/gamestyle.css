@@ -3,3 +3,40 @@
     margin-bottom: 10px;
     height: 100px;
 }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#main {
+	width: 800px;
+	margin: auto;
+}
+
+#logo {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+header {
+    overflow: auto;
+    clear: both;
+}
+#visualization {
+    float: left;
+    width: 50%;
+    background: #ddd;
+}
+
+#controls {
+    float: left;
+    width: 50%;
+}
+
+#gamearea {
+    height: 200px;
+}
