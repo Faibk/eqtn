@@ -10,12 +10,18 @@
             </header>
             <div id="gamearea">
                 <section id="visualization">
-                    
+                    <div class="result"></div>
                 </section>
-                <section id="controls"></section>
+                <section id="controls">
+                    <input id="x" type="range" min="1" max="10" value="1" step="1"></input>
+                    <input id="y" type="range" min="1" max="10" value="1" step="1"></input>
+                </section>
             </div>
         </div>        
         <script src="lib/jquery-2.1.1.min.js"></script>
         <script src="lib/handlebars-v2.0.0.js"></script>
+        <script type="text/javascript">
+            $("#x, #y").change(function() {console.log("check")});
+        </script>
 	</body>
 </html>

@@ -11,10 +11,38 @@ html, body {
 	width: 100%;
 }
 
-h1 {
+h1, h4 {
 	font-size: 100px;
-	color: #234;
+	color: #75D9B4;
     text-align: center;
+}
+
+h1 sup, h4 sup {
+    vertical-align:top; 
+    font-size:40px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+h4 sup {
+    font-size: 12px;
+}
+
+#logo {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+header {
+    overflow: auto;
+    clear: both;
+    padding: 10px 0;
+    margin-bottom: 50px;
 }
 
 #main {
@@ -22,7 +50,32 @@ h1 {
 	margin: auto;
 }
 
-sup {
-    vertical-align:top; 
-    font-size:40px;
+#vertical-align {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
+
+.view {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background: #5d917e;
+    opacity: 0.3;
+    padding: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+

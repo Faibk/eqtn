@@ -2,16 +2,47 @@
 	<head>
 		<title>EQTN Game</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/gamestyle.css">
 	</head>
 	<body>
         
         <script id="ingame_tpl" type="text/x-handlebars-template">
-            template content
+            <div id="main">
+                <header>
+                    <div id="logo"><h4>&radic;<span style="text-decoration: overline">EQTN</span><sup>1.0</sup></h4></div><button id="next" class="btn arrow right">Nächste Aufgabe</button>
+                </header>
+                <div id="gamearea">
+                    <section id="result">
+                        <div class="block result" style="height: {{result}}0px"></div>
+                    </section>
+                    <section id="term">
+                        {{#each constants}}
+                            <div class="block constant" style="height: {{this}}0px"></div>
+                        {{/each}}
+                        {{#each vars}}
+                            {{#times count}}
+                                <div class="block" data-slider-binding="{{../name}}"></div>
+                            {{/times}}
+                        {{/each}}
+                    </section>
+                    <section id="controls">
+                        {{#each vars}}
+                            <input id={{name}} type="range" min="1" max="10" value="1" step="1"></input>
+                        {{/each}}
+                    </section>
+                </div>
+            </div>
+        </script>
+    
+        <script id="constant_block_tpl" type="text/x-handlebars-template">
+            <div></div>
         </script>
         
         <script id="start_tpl" type="text/x-handlebars-template">
+            <div id="vertical-align">
             <h1>&radic;<span style="text-decoration: overline">EQTN</span><sup>1.0</sup></h1>
-            <center><a class="btn" href="#ingame">Start</button></center>
+            <a class="btn start" href="#ingame">Start</a>
+            </div>
         </script>
         
         <script id="error_tpl" type="text/x-handlebars-template">

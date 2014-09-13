@@ -1,42 +1,60 @@
 .block {
     width: 100px;
-    margin-bottom: 10px;
-    height: 100px;
+    border: 1px solid white;
+    height: 10px;
+    background: red;
+    transition: height 0.5s;
+    margin: auto;
 }
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-#main {
-	width: 800px;
-	margin: auto;
-}
-
-#logo {
-    float: left;
-}
-
-#next {
-    float: right;
-}
-
-header {
-    overflow: auto;
-    clear: both;
-}
-#visualization {
-    float: left;
-    width: 50%;
-    background: #ddd;
+#term {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 25%;
 }
 
 #controls {
-    float: left;
-    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    border: 1px solid #eee;
 }
 
 #gamearea {
+    position: relative;
     height: 200px;
+}
+
+.result {
+    background-color: #AA6B71;
+}
+
+.constant {
+    background: #2f3834;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    display: block;
+    margin: auto;
+}
+
+input[type=range] ::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #111;
+    border: none;
+    border-radius: 3px;
+}
+
+#result {
+    position: absolute;
+    top: 0;
+    right: 75%;
+    bottom: 0;
+    left: 0;
 }
