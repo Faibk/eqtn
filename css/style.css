@@ -1,0 +1,13 @@
+div:hover {
+	color: #333;
+	background-color: blue;
+}
+
+div {
+	height: 100px;
+	width: 100px;
+}
+
+input[type="range"] {
+	background-color: red;
+}
