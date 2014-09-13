@@ -1,0 +1,21 @@
+var eqts = [{
+    result: {
+        const:9
+    }, 
+    term: {
+        sum: {
+            const:3, 
+            var:x
+        }
+    }
+}, {
+    result: {
+        const:2
+    }, 
+    term: {
+        product: {
+            const:2, 
+            var:x
+        }
+    }
+}]

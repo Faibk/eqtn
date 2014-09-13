@@ -1,4 +1,4 @@
-var IngameView = function () {
+var IngameView = function (eqt) {
     
     this.el = $("<div/>").attr("class", "view");
     
