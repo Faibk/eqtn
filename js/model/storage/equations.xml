@@ -1,0 +1,23 @@
+<root>
+	<equ>
+		<term>
+			<sum>
+				<product>
+					<const>9</const>
+				</product>
+			</sum>
+		</term>
+		<term>
+			<sum>
+				<product>
+					<const>3</const>
+					<var>x</var>
+				</product>
+				<product>
+					<const>-2</const>
+					<var>y</var>
+				</product>
+			</sum>
+		</term>
+	</equ>
+</root>
