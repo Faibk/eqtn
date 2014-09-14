@@ -31,7 +31,7 @@ var storage = [
     eqt:function(x, y){return (5*x+5*y+3+5 == 33)},
     constants:[5, 3],
     vars: [{name:"x", count:5}, {name:"y", count:5}],
-    result:28, 
+    result:33, 
     },
 
     {
