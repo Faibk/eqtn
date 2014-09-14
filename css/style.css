@@ -12,11 +12,76 @@ html, body {
     height: 100%;
 }
 
-h1, h4 {
+h1 {
 	font-size: 100px;
-	color: #75D9B4;
+    animation-duration: 8s;
+    animation-name: coloranim;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-animation-duration: 8s;
+    -webkit-animation-name: coloranim;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
     text-align: center;
 }
+
+h4 {
+    color: #75D9B4;
+    text-align: center;
+}
+
+@keyframes coloranim {
+    0% {
+        color: #75D9B4; 
+    }
+
+    20% {
+        color: #AA6B71;
+    }
+    
+    40% {
+        color: #F2896F;
+    }
+    
+    60% {
+        color: #FFB87F;
+    }
+    
+    80% {
+        color: #FFEC72;
+    }
+    
+    100% {
+        color: #75D9B4;
+    }
+}
+
+@-webkit-keyframes coloranim {
+    0% {
+        color: #75D9B4; 
+    }
+
+    20% {
+        color: #AA6B71;
+    }
+    
+    40% {
+        color: #F2896F;
+    }
+    
+    60% {
+        color: #FFB87F;
+    }
+    
+    80% {
+        color: #FFEC72;
+    }
+    
+    100% {
+        color: #75D9B4;
+    }
+}
+
 
 h1 sup, h4 sup {
     vertical-align:top; 
