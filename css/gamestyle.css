@@ -21,12 +21,11 @@
     right: 0;
     bottom: 0;
     left: 50%;
-    border: 1px solid #eee;
+    padding: 0 40px;
 }
 
 #gamearea {
     position: relative;
-    height: 200px;
 }
 
 .result {
@@ -34,21 +33,67 @@
 }
 
 .constant {
-    background: #2f3834;
+    background: repeating-linear-gradient(90deg, #2f3834, #2f3834 2px, white 2px, white 4px);
 }
 
 input[type=range] {
     -webkit-appearance: none;
     display: block;
     margin: auto;
+    /* fix for FF unable to apply focus style bug  */
+    border: 1px solid white; 
+    /*required for proper track sizing in FF*/
+    width: 100%;
+    margin-bottom: 20px;
+    background: red;
 }
 
-input[type=range] ::-webkit-slider-runnable-track {
-    width: 300px;
-    height: 5px;
-    background: #111;
+input[type=range]::-webkit-slider-runnable-track {
+    height: 1px;
+    background: #5d917e;
     border: none;
-    border-radius: 3px;
+}
+
+input[type=range]::-moz-range-track {
+    height: 1px;
+    background: #5d917e;
+    border: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background: inherit;
+    margin-top: -9px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 19px;
+    width: 19px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]:focus::-moz-range-track {
+    background: #ccc;
 }
 
 #result {

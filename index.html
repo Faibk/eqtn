@@ -1,8 +1,10 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>EQTN Game</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/gamestyle.css">
+        <meta author="Fabian Kögel 2014">
 	</head>
 	<body>
         
@@ -11,7 +13,8 @@
                 <header>
                     <div id="logo"><h4>&radic;<span style="text-decoration: overline">EQTN</span><sup>1.0</sup></h4></div><button id="next" class="btn arrow right">Nächste Aufgabe</button>
                 </header>
-                <div id="gamearea">
+                <div id="alertarea"></div>
+                <div id="gamearea" style="height: {{result}}0px;">
                     <section id="result">
                         <div class="block result" style="height: {{result}}0px"></div>
                     </section>
@@ -21,11 +24,13 @@
                         {{/each}}
                         {{#each vars}}
                             {{#times count}}
-                                <div class="block" data-slider-binding="{{../name}}"></div>
+                                <div class="block" data-slider-binding="{{../name}}" style="background: {{#color ../name}}{{/color}};"></div>
                             {{/times}}
                         {{/each}}
                     </section>
+                    <div id="equals">=</div>
                     <section id="controls">
+                        <div id="instructions">Pull the sliders and solve the equation!</div>
                         {{#each vars}}
                             <input id={{name}} type="range" min="1" max="10" value="1" step="1"></input>
                         {{/each}}
@@ -34,8 +39,10 @@
             </div>
         </script>
     
-        <script id="constant_block_tpl" type="text/x-handlebars-template">
-            <div></div>
+        <script id="dialog_tpl" type="text/x-handlebars-template">
+            <div class="center-wrapper">
+                <div class="window"><header>{{title}}</header>{{text}}<button class="btn" onclick="$('.dialog').remove()">{{button}}</button></div>
+            </div>
         </script>
         
         <script id="start_tpl" type="text/x-handlebars-template">
@@ -56,6 +63,7 @@
         <script src="js/views/ingameView.js"></script>
         <script src="js/views/startView.js"></script>
         <script src="js/views/errorView.js"></script>
+        <script src="js/model/storage/equations.js"></script>
         <script src="js/main.js"></script>
 	</body>
 </html>
