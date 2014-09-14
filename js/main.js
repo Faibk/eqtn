@@ -6,7 +6,9 @@ var app = {
             "#70D0E6",
             "#F2896F",
             "#FFB87F",
-            "#FFEC72"
+            "#FFEC72",
+            "#70E678",
+            "#F96695"
         ];
         this.blockcolor = {};
 		this.model = new EqtStore();
