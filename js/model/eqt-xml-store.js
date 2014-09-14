@@ -1,7 +1,8 @@
 var EqtStore = function () {
     
     this.getEQT = function () {
-        return storage[0];
+        var index = Math.floor(Math.random()*storage.length);
+        return storage[index];
     };
 
 };
